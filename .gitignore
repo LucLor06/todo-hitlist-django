@@ -1,0 +1,8 @@
+env
+
+__pycache__
+
+.env
+
+
+django_todo/static/admin
