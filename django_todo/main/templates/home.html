@@ -3,7 +3,14 @@
 {% block title %}Tasks{% endblock title %}
 
 {% block content %}
-{% for task in tasks %}
-<p>{{ task.task }}</p>
-{% endfor %}
+<h1>ToDo</h1>
+<form>
+    <input type="text" name="task">
+    <input type="submit" value="Submit">
+</form>
+<ul>
+    {% for task in tasks %}
+    <li>{{ task.task }}</li>
+    {% endfor %}
+</ul>
 {% endblock content %}
