@@ -4,7 +4,8 @@
 
 {% block content %}
 <h1>ToDo</h1>
-<form>
+<form method="post" action="{% url 'tasks-create' %}">
+    {% csrf_token %}
     <input type="text" name="task">
     <input type="submit" value="Submit">
 </form>
