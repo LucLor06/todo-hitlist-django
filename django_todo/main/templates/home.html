@@ -11,7 +11,13 @@
 </form>
 <ul>
     {% for task in tasks %}
-    <li>{{ task.task }}</li>
+    <li>
+        {{ task.task }}
+        <form method="post" action="{% url 'tasks-delete' task.pk %}">
+            {% csrf_token %}
+            <input type="submit" value="Remove">
+        </form>
+    </li>   
     {% endfor %}
 </ul>
 {% endblock content %}
